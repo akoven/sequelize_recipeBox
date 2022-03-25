@@ -6,6 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   instructions.associate = function(models) {
     // associations can be defined here
+    instructions.belongsTo(models.recipes, { foreignKey: 'recipeId' });
   };
   return instructions;
 };
